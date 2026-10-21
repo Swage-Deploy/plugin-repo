@@ -1,6 +1,14 @@
 {
     "plugins": [
         {
+            "name": "swage/github",
+            "title": "GitHub",
+            "description": "Install repositories from GitHub accounts and organizations, with deploy keys and push-to-deploy webhooks.",
+            "kind": "source-control",
+            "repository": "https://github.com/Swage-Deploy/swage-plugin-github.git",
+            "homepage": "https://github.com/Swage-Deploy/swage-plugin-github"
+        },
+        {
             "name": "swage/gitlab",
             "title": "GitLab",
             "description": "Install repositories from GitLab.com or a self-hosted GitLab, with deploy keys and push-to-deploy webhooks.",
