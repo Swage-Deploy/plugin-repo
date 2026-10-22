@@ -15,6 +15,14 @@
             "kind": "source-control",
             "repository": "https://github.com/Swage-Deploy/swage-plugin-gitlab.git",
             "homepage": "https://github.com/Swage-Deploy/swage-plugin-gitlab"
+        },
+        {
+            "name": "swage/laraowl",
+            "title": "LaraOwl",
+            "description": "Report requests, exceptions, queries and jobs from your sites to a LaraOwl monitoring server, configured from each site's settings.",
+            "kind": "site-integration",
+            "repository": "https://github.com/Swage-Deploy/swage-plugin-laraowl.git",
+            "homepage": "https://github.com/Swage-Deploy/swage-plugin-laraowl"
         }
     ]
 }

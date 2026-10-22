@@ -22,7 +22,7 @@ Add an entry to the `plugins` array:
 | `name` | Yes | The plugin's Composer package name. Swage refuses to install a repository whose `composer.json` has a different name. |
 | `title` | No | The name shown on the Plugins page. Defaults to `name`. |
 | `description` | No | One or two sentences shown on the Plugins page. |
-| `kind` | Yes | What the plugin extends, matching `extra.swage.kind` in its `composer.json`. Only `source-control` exists so far. |
+| `kind` | Yes | What the plugin extends, matching `extra.swage.kind` in its `composer.json`. Either `source-control` or `site-integration`. |
 | `repository` | Yes | The git URL Swage installs and updates the plugin from, `https://` for a public repository. |
 | `homepage` | No | An `https://` page with more about the plugin, linked from the Plugins page. |
 
