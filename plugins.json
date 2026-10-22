@@ -23,6 +23,14 @@
             "kind": "site-integration",
             "repository": "https://github.com/Swage-Deploy/swage-plugin-laraowl.git",
             "homepage": "https://github.com/Swage-Deploy/swage-plugin-laraowl"
+        },
+        {
+            "name": "swage/nightwatch",
+            "title": "Nightwatch",
+            "description": "Report your sites to Laravel Nightwatch, with an agent Swage runs and restarts for each site, configured from its settings.",
+            "kind": "site-integration",
+            "repository": "https://github.com/Swage-Deploy/swage-plugin-nightwatch.git",
+            "homepage": "https://github.com/Swage-Deploy/swage-plugin-nightwatch"
         }
     ]
 }
