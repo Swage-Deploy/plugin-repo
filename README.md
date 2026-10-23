@@ -1,4 +1,16 @@
-# Swage plugin index
+<p align="center">
+    <img src="https://raw.githubusercontent.com/Swage-Deploy/swage-core/main/public/favicon.svg" width="72" height="72" alt="Swage">
+</p>
+
+<h1 align="center">Swage plugin index</h1>
+
+<p align="center">
+    The plugins Swage can install and update.
+    <br>
+    <a href="https://swagedeploy.app"><strong>swagedeploy.app</strong></a> · <a href="https://swagedeploy.app/docs/plugins">Documentation</a>
+</p>
+
+---
 
 `plugins.json` lists the plugins Swage can install. Swage's **Plugins** page shows every plugin listed here that is not installed yet, and only plugins listed here can be installed or updated.
 
@@ -32,4 +44,6 @@ Entries that are missing a required field or have an unknown kind are ignored.
 
 A plugin runs inside Swage with access to everything it stores, including the SSH keys of every server it manages. Listing a plugin here makes it installable on every Swage that reads this index, and every new version tag it publishes is offered as an update. Only list repositories you trust, and review changes to them.
 
-Swage reads this file from `https://raw.githubusercontent.com/Swage-Deploy/plugin-repo/main/plugins.json`, so this repository must be public. A Swage install can read a different index by setting `SWAGE_PLUGIN_INDEX`.
+## Development
+
+Swage reads this file from `https://raw.githubusercontent.com/Swage-Deploy/plugin-repo/main/plugins.json`, so this repository must be public, and every change to `main` reaches every Swage install. A Swage install can read a different index by setting `SWAGE_PLUGIN_INDEX`, which is the way to try an entry before listing it here.
