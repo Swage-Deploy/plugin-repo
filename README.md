@@ -5,14 +5,14 @@
 <h1 align="center">Swage plugin index</h1>
 
 <p align="center">
-    The plugins Swage can install and update.
+    Swage's official plugins.
     <br>
     <a href="https://swagedeploy.app"><strong>swagedeploy.app</strong></a> · <a href="https://swagedeploy.app/docs/plugins">Documentation</a>
 </p>
 
 ---
 
-`plugins.json` lists the plugins Swage can install. Swage's **Plugins** page shows every plugin listed here that is not installed yet, and only plugins listed here can be installed or updated.
+`plugins.json` lists Swage's official plugins. Swage's **Plugins** page shows every plugin listed here that is not installed yet, and installs and updates each one only from the repository listed here, and only from version tags signed with a Swage release key. Other plugins are installed from their own repository with **Install from a repository**, and are marked unofficial.
 
 ## Listing a plugin
 
@@ -42,7 +42,18 @@ Entries that are missing a required field or have an unknown kind are ignored.
 
 ## Review before listing
 
-A plugin runs inside Swage with access to everything it stores, including the SSH keys of every server it manages. Listing a plugin here makes it installable on every Swage that reads this index, and every new version tag it publishes is offered as an update. Only list repositories you trust, and review changes to them.
+A plugin runs inside Swage with access to everything it stores, including the SSH keys of every server it manages. Listing a plugin here makes it installable on every Swage that reads this index. Only list repositories you trust.
+
+## Signing releases
+
+Swage only installs a listed plugin's version tag once it is signed with a key in core's `resources/release-signers`. Review each release, then sign its tag with the release key:
+
+```bash
+git -c gpg.format=ssh -c user.signingkey=~/.ssh/swage-release tag -s v1.0.1 -m v1.0.1
+git push origin v1.0.1
+```
+
+An unsigned tag, or one signed with another key, is refused by every panel, so a new tag pushed to a plugin's repository does nothing until it is signed.
 
 ## Development
 
