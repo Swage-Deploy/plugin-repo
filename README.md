@@ -46,7 +46,9 @@ A plugin runs inside Swage with access to everything it stores, including the SS
 
 ## Signing releases
 
-Swage only installs a listed plugin's version tag once it is signed with a key in core's `resources/release-signers`. Review each release, then sign its tag with the release key:
+Swage only installs a listed plugin's version tag once it is signed with a key in core's `resources/release-signers`. Review each release, then publish it with the plugin's **Release** workflow: on the repository's **Actions** tab, choose **Release → Run workflow**, enter the version, such as `v1.0.1`, and approve the run when GitHub asks. The workflow checks the version is newer than the last one and that `main` passed its checks, signs the tag with the CI release key, checks the signature against core's release signers, then pushes the tag and publishes a GitHub release.
+
+The CI key is a secret of each repository's `release` environment, which only `main` can use and which waits for a maintainer's approval on every run. To sign by hand instead, with your own release key:
 
 ```bash
 git -c gpg.format=ssh -c user.signingkey=~/.ssh/swage-release tag -s v1.0.1 -m v1.0.1
