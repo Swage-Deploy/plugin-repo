@@ -35,7 +35,7 @@
         {
             "name": "swage/security-scanner",
             "title": "Security scanner",
-            "description": "Scan each server's SSH, sudo and nginx logs for brute force attempts and probing, with alerts, firewall blocking and fail2ban.",
+            "description": "Scan each server's SSH, sudo and nginx logs for brute force attempts and probing, with alerts, firewall blocking, fail2ban and an optional AI review.",
             "kind": "server-integration",
             "repository": "https://github.com/Swage-Deploy/swage-plugin-security-scanner.git",
             "homepage": "https://github.com/Swage-Deploy/swage-plugin-security-scanner"
