@@ -1,6 +1,14 @@
 {
     "plugins": [
         {
+            "name": "swage/ai-review",
+            "title": "AI review",
+            "description": "Have an AI model of your choice review each server's security, performance and reliability from a read-only snapshot, and suggest what to fix based on its hardware.",
+            "kind": "server-integration",
+            "repository": "https://github.com/Swage-Deploy/swage-plugin-ai-review.git",
+            "homepage": "https://github.com/Swage-Deploy/swage-plugin-ai-review"
+        },
+        {
             "name": "swage/github",
             "title": "GitHub",
             "description": "Install repositories from GitHub accounts and organizations, with deploy keys and push-to-deploy webhooks.",
@@ -35,7 +43,7 @@
         {
             "name": "swage/security-scanner",
             "title": "Security scanner",
-            "description": "Scan each server's SSH, sudo and nginx logs for brute force attempts and probing, with alerts, firewall blocking, fail2ban and an optional AI review.",
+            "description": "Scan each server's SSH, sudo and nginx logs for brute force attempts and probing, with alerts, firewall blocking and fail2ban.",
             "kind": "server-integration",
             "repository": "https://github.com/Swage-Deploy/swage-plugin-security-scanner.git",
             "homepage": "https://github.com/Swage-Deploy/swage-plugin-security-scanner"
